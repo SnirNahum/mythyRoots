@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import "./App.css";
 import "./assets/styles/main.scss";
 import AppFooter from "./components/AppFooter.jsx";
-import { InfiniteCanvas } from "./components/InfiniteCanvas.jsx";
 import { NavBar } from "./components/NavBar.jsx";
 import { httpService } from "./services/httpService.js";
 import {
@@ -11,7 +10,7 @@ import {
   RELATIONSHIPS_UNIVERSE,
 } from "./utils/SavedWords.jsx";
 import { useMythyRootsStore } from "./store/store.js";
-import { ReactFlowProvider } from "@xyflow/react";
+import FamilyTree from "./components/family-tree/FamilyTree.jsx";
 
 function App() {
   const {
@@ -57,9 +56,7 @@ function App() {
   return (
     <div className="main-layout">
       <NavBar />
-      <ReactFlowProvider>
-        <InfiniteCanvas />
-      </ReactFlowProvider>
+      <FamilyTree />
       <AppFooter />
     </div>
   );

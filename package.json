@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "basicprimitives": "^6.6.1",
+    "basicprimitivesreact": "^6.6.1"
+  }
+}

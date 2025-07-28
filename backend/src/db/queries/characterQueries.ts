@@ -17,4 +17,5 @@ export const GET_ACTIVE_CHARACTER_INCOMING_RELATIONS = `
   JOIN characters c ON r.source_id = c.id 
   WHERE r.target_id = $1
   AND r.status = 0
+  AND r.relationship_type = 'parent'
 `;
