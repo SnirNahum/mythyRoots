@@ -1,0 +1,62 @@
+@use "../basic/variables";
+@use "../basic/functions";
+
+.node-foreign-object-div span {
+  overflow: auto;
+}
+.node-button-foreign-object {
+  y: functions.rem(-32);
+}
+
+
+.node-wrapper {
+  width: variables.$width;
+  height: variables.$height;
+  padding-top: variables.$imageDiffVert - 2;
+  padding-left: functions.rem(1);
+  padding-right: functions.rem(1);
+}
+
+.node-card {
+  font-family: "Inter", sans-serif;
+  background-color: variables.$clr11;
+  width: 220px;
+  height: 83px;
+  margin-left: functions.rem(-1);
+  border-radius: functions.rem(10);
+  border: 1px solid #e4e2e9;
+}
+
+.node-badge-bg {
+  background-color: variables.$clr11;
+  margin-top: -48px;
+  margin-left: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.node-avatar {
+  margin-top: -45px;
+  img {
+    margin-left: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+
+.node-name {
+  font-size: 15px;
+  color: #08011e;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.node-title {
+  font-size: 12px;
+  color: #716e7b;
+  margin-left: 20px;
+  margin-top: 3px;
+}

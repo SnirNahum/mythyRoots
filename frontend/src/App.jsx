@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import "./App.css";
 import "./assets/styles/main.scss";
 import AppFooter from "./components/AppFooter.jsx";
-import { InfiniteCanvas } from "./components/InfiniteCanvas.jsx";
 import { NavBar } from "./components/NavBar.jsx";
 import { httpService } from "./services/httpService.js";
 import {
@@ -11,14 +10,15 @@ import {
   RELATIONSHIPS_UNIVERSE,
 } from "./utils/SavedWords.jsx";
 import { useMythyRootsStore } from "./store/store.js";
-import { ReactFlowProvider } from "@xyflow/react";
+import { FamilygChart } from "./familyChart/FamilyChart.jsx";
 
 function App() {
   const {
     setAllUniverses,
     setUniverseCharacters,
-    currentUniverse,
     setCurrentRelationships,
+    currentUniverse,
+    currentUniverseCharacters,
   } = useMythyRootsStore();
 
   useEffect(() => {
@@ -54,12 +54,12 @@ function App() {
     getCharactersRelationships();
   }, [currentUniverse?.id, setUniverseCharacters]);
 
+
   return (
     <div className="main-layout">
       <NavBar />
-      <ReactFlowProvider>
-        <InfiniteCanvas />
-      </ReactFlowProvider>
+        <FamilygChart characters={currentUniverseCharacters}/>
+
       <AppFooter />
     </div>
   );

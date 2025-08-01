@@ -12,7 +12,7 @@ export const GET_ACTIVE_CHARACTER_OUTGOING_RELATIONS = `
 `;
 
 export const GET_ACTIVE_CHARACTER_INCOMING_RELATIONS = `
-  SELECT r.*, c.name as source_name 
+  SELECT r.source_id as source_id, r.relationship_type 
   FROM relationships r 
   JOIN characters c ON r.source_id = c.id 
   WHERE r.target_id = $1
