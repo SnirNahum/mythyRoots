@@ -1,15 +1,25 @@
-@use "../basic/variables";
-@use "../basic/functions";
-
+@use "../../basic/variables";
+@use "../../basic/functions";
+.chart-container {
+  height: 100%;
+  width: 100%;
+}
+.org-chart-container{
+  width: 100%;
+  height: 100%;
+}
+.svg-chart-container {
+  height: 110%;
+  background-color: #3c3c52;
+}
 .node-foreign-object-div span {
   overflow: auto;
 }
 .node-button-foreign-object {
-  y: functions.rem(-32);
+  y: functions.rem(8);
 }
 
-
-.node-wrapper {
+.node-container {
   width: variables.$width;
   height: variables.$height;
   padding-top: variables.$imageDiffVert - 2;
@@ -20,8 +30,8 @@
 .node-card {
   font-family: "Inter", sans-serif;
   background-color: variables.$clr11;
-  width: 220px;
-  height: 83px;
+  width: variables.$width;
+  height: variables.$height;
   margin-left: functions.rem(-1);
   border-radius: functions.rem(10);
   border: 1px solid #e4e2e9;
@@ -46,12 +56,21 @@
     object-fit: cover;
   }
 }
+.ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
 
 .node-name {
   font-size: 15px;
   color: #08011e;
   margin-left: 20px;
   margin-top: 10px;
+  @extend .ellipsis;
 }
 
 .node-title {
@@ -59,4 +78,10 @@
   color: #716e7b;
   margin-left: 20px;
   margin-top: 3px;
+  width: 85%;
+  @extend .ellipsis;
+}
+
+.action-buttons{
+  display: none;
 }

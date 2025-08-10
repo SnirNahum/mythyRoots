@@ -1,10 +1,9 @@
 /* From Uiverse.io by gharsh11032000 */
-@use "../basic/variables";
-@use "../basic/functions";
+@use "../../basic/variables";
+@use "../../basic/functions";
 
 .universe-button {
   cursor: pointer;
-  position: relative;
   padding: 10px 24px;
   font-size: 18px;
   color: variables.$clr2;
