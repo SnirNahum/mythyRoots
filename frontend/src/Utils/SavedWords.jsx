@@ -1,5 +1,6 @@
 // General words
 export const NAME = "name";
+export const PARENT_ID = "parentId";
 
 // Components
 export const UNIVERSES = "Universes";

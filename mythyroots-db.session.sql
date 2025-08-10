@@ -1,2 +1,2 @@
-INSERT INTO universes (icon, background_color)
-VALUES ()
+
+SELECT * FROM relationships

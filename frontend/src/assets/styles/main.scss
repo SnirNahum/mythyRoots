@@ -1,4 +1,4 @@
-//basics
+// basics
 @use "./basic/setup.scss";
 @use "./basic/functions.scss";
 @use "./basic/variables.scss";
@@ -9,12 +9,20 @@
 // cmps
 @use "cmps/navBar/navbar.scss";
 @use "cmps/navBar/navbar-modal.scss";
-@use "cmps/buttons.scss";
 @use "./card.scss";
 @use "./modal.scss";
 @use "./cmps/infinite-canvas.scss";
+@use "./cmps/chart/org-chart.scss";
+@use "./cmps/footer.scss";
 
-//Utils
+// utils
 @use "./cmps/Input.scss";
 @use "./cmps/universe-not-found.scss";
 @use "./cmps/loader.scss";
+
+
+// buttons
+@use "cmps/buttons/buttons.scss";
+@use "cmps/buttons/tooltip-button.scss";
+@use "cmps/buttons/chart-action-buttons.scss";
+@use "cmps/buttons/burger-menu.scss";

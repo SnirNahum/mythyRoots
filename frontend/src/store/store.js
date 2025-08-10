@@ -11,3 +11,4 @@ export const useMythyRootsStore = create((set) => ({
     set({ currentUniverseCharacters: characters }),
   setCurrentRelationships: (universe) => set({ CurrentRelationships: universe }),
 }));
+

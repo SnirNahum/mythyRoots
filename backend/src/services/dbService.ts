@@ -1,6 +1,7 @@
 import {
   get_incoming_relationships,
   get_outgoing_relationships,
+  restructure_data_chart,
 } from "../controllers/relationshipsCotroller";
 import pool from "../db";
 import { create_entity_query } from "../db/queries/crudQueries";
@@ -25,7 +26,8 @@ export async function getEntityById<T>(query: string, isAllCharacters = false) {
     let result: any = await pool.query(query);
     if (isAllCharacters) {
       result = await get_incoming_relationships(result.rows);
-      const data = await get_outgoing_relationships(result);
+      await get_outgoing_relationships(result);
+      await restructure_data_chart(result);
       return result;
     }
     return result.rows[0] || null;

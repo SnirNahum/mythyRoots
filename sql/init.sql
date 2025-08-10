@@ -41,7 +41,8 @@ CREATE TABLE IF NOT EXISTS characters (
 -- 4. Relationship Type Enum
 DO $$ BEGIN
   CREATE TYPE relationship_type AS ENUM (
-    'parent',
+    'father',
+    'mother',
     'child',
     'sibling',
     'spouse',
