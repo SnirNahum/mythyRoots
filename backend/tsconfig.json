@@ -11,5 +11,5 @@
     "sourceMap": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "scripts/import_characters.js"]
+  "include": ["src/**/*", "src/scripts/import_characters.js"]
 }

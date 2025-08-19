@@ -1,4 +1,5 @@
 import { default_avatar } from "../components/Utils.jsx/utils";
+
 import { OrgChart } from "d3-org-chart";
 
 export function nodeStyle(d) {
@@ -10,11 +11,6 @@ export function nodeStyle(d) {
           <img src="${d.data.image}" />
         </div>
         <div class="node-name ellipsis">${d.data.name}</div>
-        ${
-          d.data.image
-            ? `<div class="node-title ellipsis">Mother: Wife</div>`
-            : ""
-        }
         <div class="node-title ellipsis">${d.data.title}</div>
       </div>
     </div>
@@ -38,7 +34,6 @@ export function getData(characters) {
     };
   });
 }
-
 export function chartSettings(
   chartRef,
   d3Container,
@@ -62,9 +57,33 @@ export function chartSettings(
     .neighbourMargin((a, b) => 20)
     .nodeContent((d, i, arr, state) => nodeStyle(d))
     .onNodeClick((d) => {
-      setCurrentRoot(d.id)
+      setCurrentRoot(d.id);
     })
     .initialZoom(1)
     .compact(!!(compact++ % 2))
     .render();
+}
+
+export function filterChart(value = "", chartRef) {
+  const chart = chartRef?.current;
+  const data = chart.data();
+  if (!chart) return;
+
+  value = value.trim().toLowerCase();
+
+  for (const d of data) {
+    d._expanded = false;
+    d._highlighted = false;
+  }
+  if (value) {
+    for (const d of data) {
+      const name = (d?.name || d?.data?.name || "").toLowerCase();
+      if (name.includes(value)) {
+        d._highlighted = true;
+        d._expanded = true;
+      }
+    }
+  }
+
+  chart.data(data).render().fit();
 }

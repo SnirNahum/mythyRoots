@@ -52,13 +52,12 @@ function App() {
       }
     };
     getCharactersRelationships();
-  }, [currentUniverse?.id, setUniverseCharacters]);
-
+  }, [currentUniverse?.id, setCurrentRelationships]);
 
   return (
     <div className="main-layout">
       <NavBar />
-        <FamilygChart characters={currentUniverseCharacters}/>
+      <FamilygChart characters={currentUniverseCharacters} />
 
       <AppFooter />
     </div>

@@ -1,10 +1,11 @@
 @use "../../basic/variables";
 @use "../../basic/functions";
+
 .chart-container {
   height: 100%;
   width: 100%;
 }
-.org-chart-container{
+.org-chart-container {
   width: 100%;
   height: 100%;
 }
@@ -16,15 +17,11 @@
   overflow: auto;
 }
 .node-button-foreign-object {
-  y: functions.rem(8);
+  y: functions.rem(-12);
 }
 
 .node-container {
-  width: variables.$width;
-  height: variables.$height;
   padding-top: variables.$imageDiffVert - 2;
-  padding-left: functions.rem(1);
-  padding-right: functions.rem(1);
 }
 
 .node-card {
@@ -82,6 +79,6 @@
   @extend .ellipsis;
 }
 
-.action-buttons{
-  display: none;
+.action-buttons {
+  // display: none;
 }

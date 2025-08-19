@@ -47,7 +47,7 @@ export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
               onClick={() => chartRef.current?.compact(compact++ % 2).render()}
               className="btn"
             >
-              <i className="fas fa-sitemap"></i> Compact
+              Compact
             </button>
             <button
               onClick={(d) =>
@@ -58,13 +58,13 @@ export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
               }
               className="btn"
             >
-              <i className="fas fa-route"></i> Mark root
+              Mark root
             </button>
             <button
               onClick={() => chartRef.current.clearHighlighting()}
               className="btn btn-action-button waves-effect waves-light"
             >
-              <i className="fas fa-eraser"></i> Clear mark
+              Clear mark
             </button>
           </>
         )}
