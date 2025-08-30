@@ -6,11 +6,14 @@ export const CharactersDropdown = ({ characters, selectedCharacter }) => {
     if (reason === "clear") selectedCharacter("");
     if (newValue) selectedCharacter(newValue.id);
   };
+  const sortedCharacters = [...characters].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
   return (
     <>
       <Autocomplete
         className="characters-dropdown"
-        options={characters}
+        options={sortedCharacters}
         getOptionLabel={(character) => character.name}
         sx={{ width: 300 }}
         onChange={(event, newValue, reason) =>

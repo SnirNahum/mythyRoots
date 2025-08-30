@@ -3,7 +3,7 @@ import { UNIVERSE } from "../utils/SavedWords";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { useMythyRootsStore } from "../store/store";
 
-const Card = ({
+const UniverseCard = ({
   filteredUniverses,
   isUniverse: isUniverseModal = true,
   onClose,
@@ -50,4 +50,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default UniverseCard;

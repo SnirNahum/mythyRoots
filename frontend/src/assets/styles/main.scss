@@ -9,8 +9,8 @@
 // cmps
 @use "cmps/navBar/navbar.scss";
 @use "cmps/navBar/navbar-modal.scss";
-@use "./card.scss";
-@use "./modal.scss";
+@use "./universe-card.scss";
+@use "./universe-modal.scss";
 @use "./cmps/infinite-canvas.scss";
 @use "./cmps/chart/org-chart.scss";
 @use "./cmps/footer.scss";
@@ -25,5 +25,4 @@
 @use "cmps/buttons/buttons.scss";
 @use "cmps/buttons/tooltip-button.scss";
 @use "cmps/buttons/chart-action-buttons.scss";
-@use "cmps/buttons/burger-menu.scss";
 @use "cmps/buttons/characters-filter.scss";

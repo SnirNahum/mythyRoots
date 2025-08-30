@@ -57,6 +57,7 @@ function App() {
   return (
     <div className="main-layout">
       <NavBar />
+
       <FamilygChart characters={currentUniverseCharacters} />
 
       <AppFooter />

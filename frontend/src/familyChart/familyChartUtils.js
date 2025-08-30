@@ -1,4 +1,4 @@
-import { default_avatar } from "../components/Utils.jsx/utils";
+import { default_avatar } from "../components/Utils/utils";
 
 import { OrgChart } from "d3-org-chart";
 

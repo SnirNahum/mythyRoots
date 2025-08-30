@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { BurgerMenu } from "../Utils.jsx/BurgerMenu";
 
 export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
   let compact = 0;
@@ -23,8 +22,8 @@ export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
   }
   return (
     <div className="actions-buttons-container">
+      
       <div className="action-buttons">
-        <BurgerMenu setIsChecked={setIsChecked} />
 
         {hideMenu && (
           <>

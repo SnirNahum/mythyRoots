@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import CardsPage from "./CardsPage";
-import UniverseButton from "./Utils.jsx/UniverseButton";
+import UniverseButton from "./Utils/UniverseButton";
 
 export default function UniverseModal() {
   const [open, setOpen] = useState(false);

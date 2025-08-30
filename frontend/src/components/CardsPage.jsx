@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "./Card";
+import UniverseCard from "./UniverseCard";
 import UniverseFilter from "./UniverseFilter";
 import { NAME } from "../utils/SavedWords";
 import { useMythyRootsStore } from "../store/store";
@@ -20,7 +20,7 @@ const CardsPage = ({ onClose }) => {
       <UniverseFilter universes={universes} universeFilter={onChangeHandler} />
 
       <div className="universe-card">
-        <Card filteredUniverses={filteredUniverses} onClose={onClose} />
+        <UniverseCard filteredUniverses={filteredUniverses} onClose={onClose} />
       </div>
     </>
   );
