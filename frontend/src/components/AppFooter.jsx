@@ -1,7 +1,5 @@
 function AppFooter() {
-  return (
-    <div className="footer">© MythyRoots</div>
-  )
+  return <div className="footer">© MythyRoots</div>;
 }
 
-export default AppFooter
+export default AppFooter;

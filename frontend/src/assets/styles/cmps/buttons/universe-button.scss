@@ -1,49 +1,8 @@
-/* From Uiverse.io by gharsh11032000 */
 @use "../../basic/variables";
 @use "../../basic/functions";
 
-.universe-button {
-  cursor: pointer;
-  padding: 10px 24px;
-  font-size: 18px;
-  color: variables.$clr2;
-  border: 2px solid variables.$clr3;
-  border-radius: 34px;
-  background-color: transparent;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  overflow: hidden;
-}
-
-.universe-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border-radius: inherit;
-  scale: 0;
-  z-index: -1;
-  background-color: variables.$clr4;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.universe-button:hover::before {
-  scale: 3;
-}
-
-.universe-button:hover {
-  color: variables.$clr6;
-  scale: 1.1;
-  box-shadow: 0 0px 20px variables.$clr6;
-}
-
-.universe-button:active {
-  scale: 1;
-}
-
 /* From Uiverse.io by StealthWorm */
-.btn {
+.btn-universe-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,23 +72,23 @@
   background: rgba(142, 81, 234, 0.704);
 }
 
-.btn:hover .container-stars {
+.btn-universe-button:hover .container-stars {
   z-index: 1;
   background-color: variables.$clr9;
 }
 
-.btn:hover {
+.btn-universe-button:hover {
   transform: scale(1.1);
 }
 
-.btn:active {
+.btn-universe-button:active {
   border: double 4px #fe53bb;
   background-origin: border-box;
   background-clip: content-box, border-box;
   animation: none;
 }
 
-.btn:active .circle {
+.btn-universe-button:active .circle {
   background: #fe53bb;
 }
 

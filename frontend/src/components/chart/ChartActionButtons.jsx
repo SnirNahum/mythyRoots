@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { BurgerMenu } from "../Utils.jsx/BurgerMenu";
 
 export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
   let compact = 0;
@@ -23,8 +22,8 @@ export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
   }
   return (
     <div className="actions-buttons-container">
+      
       <div className="action-buttons">
-        <BurgerMenu setIsChecked={setIsChecked} />
 
         {hideMenu && (
           <>
@@ -47,7 +46,7 @@ export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
               onClick={() => chartRef.current?.compact(compact++ % 2).render()}
               className="btn"
             >
-              <i className="fas fa-sitemap"></i> Compact
+              Compact
             </button>
             <button
               onClick={(d) =>
@@ -58,13 +57,13 @@ export const ChartActionButtons = ({ chartRef, characters, currentRoot }) => {
               }
               className="btn"
             >
-              <i className="fas fa-route"></i> Mark root
+              Mark root
             </button>
             <button
               onClick={() => chartRef.current.clearHighlighting()}
               className="btn btn-action-button waves-effect waves-light"
             >
-              <i className="fas fa-eraser"></i> Clear mark
+              Clear mark
             </button>
           </>
         )}

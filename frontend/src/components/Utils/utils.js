@@ -11,8 +11,8 @@ export function createNodeStrutcture(data) {
 export function restructureNodes() {}
 
 export function default_avatar(characterGender) {
-  if (characterGender === 0) {
+  if (characterGender == 0) {
     return "https://as2.ftcdn.net/jpg/01/31/87/13/1000_F_131871374_GBgE0Ua0PXGtOvwS9W29bTG3EB1ylaJs.jpg";
-  }
-  return "https://as2.ftcdn.net/jpg/01/40/46/19/1000_F_140461947_tWo9D0W8QQnrhzhCXJbDHIXblMV9BTZv.jpg";
+  } else
+    return "https://as2.ftcdn.net/jpg/01/40/46/19/1000_F_140461947_tWo9D0W8QQnrhzhCXJbDHIXblMV9BTZv.jpg";
 }

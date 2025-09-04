@@ -2,7 +2,10 @@ import { UNIVERSES } from "../../utils/SavedWords";
 
 const UniverseButton = ({ handleOpen }) => {
   return (
-    <button onClick={handleOpen} type="universe-button" className="btn">
+    <button
+      onClick={handleOpen}
+      className="btn-universe-button"
+    >
       <p>{UNIVERSES?.toUpperCase()}</p>
       <div className="container-stars">
         <div className="stars"></div>
@@ -17,5 +20,3 @@ const UniverseButton = ({ handleOpen }) => {
 };
 
 export default UniverseButton;
-
-

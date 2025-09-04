@@ -1,0 +1,39 @@
+@use "./basic/variables";
+@use "./basic/functions";
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+
+  .universe-card {
+    height: functions.rem(300);
+    background-color: variables.$clr1;
+    border-radius: functions.rem(12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 functions.rem(2) functions.rem(8) rgba(0, 0, 0, 0.6);
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    .card-header {
+      height: functions.rem(80);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: functions.rem(12) functions.rem(16);
+    }
+
+    .card-body {
+      padding: functions.rem(20);
+      height: 100%;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

@@ -22,6 +22,15 @@
   border: functions.rem(2) solid variables.$clr1;
 }
 
-body{
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: variables.$clr11;
   margin: 0;
 }

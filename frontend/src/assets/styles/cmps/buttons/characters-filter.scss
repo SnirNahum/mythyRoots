@@ -1,0 +1,19 @@
+@use "../../basic/variables";
+@use "../../basic/functions";
+
+.characters-dropdown {
+  width: 320px;
+  margin: 20px;
+  margin: 20px 20px 20px 0;
+
+  & label,
+  input {
+    color: variables.$clr11;
+  }
+}
+
+.MuiAutocomplete-option {
+  & span {
+    color: variables.$clr2;
+  }
+}

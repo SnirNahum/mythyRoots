@@ -1,25 +1,12 @@
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import { useState } from "react";
+import { Modal, Box } from "@mui/material";
 import CardsPage from "./CardsPage";
-import UniverseButton from "./Utils.jsx/UniverseButton";
 
-export default function UniverseModal() {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function UniverseModal({ onClose }) {
   return (
-    <div>
-      <UniverseButton handleOpen={handleOpen} />
-      <Modal open={open} onClose={handleClose}>
-        <Box className="modal-container">
-          <div className="scroller">
-            <CardsPage onClose={handleClose}/>
-          </div>
-        </Box>
-      </Modal>
-    </div>
+    <Modal open={open} onClose={onClose}>
+      <Box className="modal-unvierse-container">
+        <CardsPage onClose={onClose} />
+      </Box>
+    </Modal>
   );
 }
