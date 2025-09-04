@@ -1,28 +1,34 @@
 @use "../../basic/variables";
 @use "../../basic/functions";
 
-.chart-container {
-  height: 100%;
-  width: 100%;
-}
-.org-chart-container {
-  width: 100%;
-  height: 100%;
-}
-.svg-chart-container {
-  height: 110%;
-  background-color: #3c3c52;
-}
-.node-foreign-object-div span {
-  overflow: auto;
-}
-.node-button-foreign-object {
-  y: functions.rem(-12);
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;     
+  justify-content: flex-start;
+  width: 90%;
+  min-height: 80dvh;       
 }
 
-.node-container {
-  padding-top: variables.$imageDiffVert - 2;
+.characters-chart {
+  flex: 1 1 auto;           
+  position: relative;       
+  border-radius: 20px;
+  background-color: #3c3c52;
+  overflow: hidden;        
 }
+
+.svg-chart-container {
+  position: absolute;
+  inset: 0;                
+  width: 100%;
+  height: 100%;
+}
+
+.node-foreign-object-div span { overflow: auto; }
+.node-button-foreign-object { y: functions.rem(-12); }
+.node-container { padding-top: variables.$imageDiffVert - 2; }
 
 .node-card {
   font-family: "Inter", sans-serif;
@@ -82,3 +88,5 @@
 .action-buttons {
   // display: none;
 }
+
+

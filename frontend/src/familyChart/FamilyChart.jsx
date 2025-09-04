@@ -28,39 +28,35 @@ export const FamilygChart = ({ characters, onNodeClick }) => {
     }
   }, [characters, onNodeClick]);
 
-useEffect(() => {
-  if (selectedCharacter) {
-    chartRef.current
-      .clearHighlighting()
-      .setCentered(selectedCharacter)
-      .setHighlighted(selectedCharacter)
-      .render();
-  }
-  if (selectedCharacter === '') {
-    chartRef.current.clearHighlighting().render();}
-}, [selectedCharacter]);
-
+  useEffect(() => {
+    if (selectedCharacter) {
+      chartRef.current
+        .clearHighlighting()
+        .setCentered(selectedCharacter)
+        .setHighlighted(selectedCharacter)
+        .render();
+    }
+    if (selectedCharacter === "") {
+      chartRef.current.clearHighlighting().render();
+    }
+  }, [selectedCharacter]);
 
   if (!characters || characters.length === 0) return <Loader />;
 
   return (
-    <div className="chart-container">
+    <div className="main-container">
       {structuredData.length > 0 && (
         <CharactersDropdown
           characters={structuredData}
           selectedCharacter={setSelectedCharacter}
         />
       )}
-      <div
-        ref={d3Container}
-        className="org-chart-container"
-        style={{ width: "100%", height: "600px" }}
-      />
-      <ChartActionButtons
+      <div className="characters-chart" ref={d3Container} />
+      {/* <ChartActionButtons
         chartRef={chartRef}
         characters={characters}
         currentRoot={currentRoot}
-      />
+      /> */}
     </div>
   );
 };

@@ -24,7 +24,7 @@ const UniverseCard = ({
         return (
           <div
             key={idx}
-            className="card-details"
+            className="universe-card"
             onClick={() => UniverseHandler(filteredUniverse)}
           >
             <div

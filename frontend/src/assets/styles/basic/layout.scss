@@ -3,7 +3,7 @@
 
 .main-layout {
   display: grid;
-  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-rows: auto 1fr auto;
   justify-items: center;
   height: 100vh;
   background-color: variables.$clr2;

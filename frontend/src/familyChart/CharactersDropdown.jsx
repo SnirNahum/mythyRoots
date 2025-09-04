@@ -10,12 +10,10 @@ export const CharactersDropdown = ({ characters, selectedCharacter }) => {
     a.name.localeCompare(b.name)
   );
   return (
-    <>
       <Autocomplete
         className="characters-dropdown"
         options={sortedCharacters}
         getOptionLabel={(character) => character.name}
-        sx={{ width: 300 }}
         onChange={(event, newValue, reason) =>
           handleChange(event, newValue, reason)
         }
@@ -28,6 +26,5 @@ export const CharactersDropdown = ({ characters, selectedCharacter }) => {
           </li>
         )}
       />
-    </>
   );
 };

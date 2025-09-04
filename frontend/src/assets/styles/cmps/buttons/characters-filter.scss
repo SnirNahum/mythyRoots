@@ -2,7 +2,10 @@
 @use "../../basic/functions";
 
 .characters-dropdown {
-  margin: 20px 0 20px 320px;
+  width: 320px;
+  margin: 20px;
+  margin: 20px 20px 20px 0;
+
   & label,
   input {
     color: variables.$clr11;
@@ -14,4 +17,3 @@
     color: variables.$clr2;
   }
 }
-
