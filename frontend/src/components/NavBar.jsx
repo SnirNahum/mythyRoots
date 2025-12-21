@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MythyRootsLogo from "../utils/MythyRootsLogo";
-import UniverseModal from "./UniverseModal";
 import UniverseButton from "./Utils/UniverseButton";
+import ModalController from "./Utils/Modals/ModalController";
 
 export function NavBar() {
   const [open, setOpen] = useState(false);
@@ -10,7 +10,7 @@ export function NavBar() {
     <div className="navbar-container">
       <MythyRootsLogo />
       <UniverseButton handleOpen={() => setOpen(true)} />
-      {open && <UniverseModal onClose={() => setOpen(false)} />}
+      <ModalController onClose={() => setOpen(false)} />
     </div>
   );
 }

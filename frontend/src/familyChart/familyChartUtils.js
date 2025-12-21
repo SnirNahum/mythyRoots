@@ -18,9 +18,11 @@ export function nodeStyle(d) {
 }
 
 export function getData(characters) {
-  return characters.map((character) => {
+  if (!characters || characters.length === 0) return [];
+  
+  const data = characters.map((character) => {
     let parentId = null;
-    if (character.incomingRelations[0]?.source_id) {
+    if (character.incomingRelations?.[0]?.source_id) {
       parentId = character.incomingRelations[0].source_id.toString();
     }
 
@@ -33,6 +35,29 @@ export function getData(characters) {
       parentId,
     };
   });
+
+  const rootNodes = data.filter(node => !node.parentId);
+  
+  if (rootNodes.length > 1) {
+    const virtualRoot = {
+      id: 'virtual-root',
+      name: 'Universe',
+      title: 'Multiple Family Trees',
+      image: default_avatar(),
+      gender: null,
+      parentId: null,
+    };
+    
+    data.forEach(node => {
+      if (!node.parentId) {
+        node.parentId = 'virtual-root';
+      }
+    });
+    
+    data.unshift(virtualRoot);
+  }
+  
+  return data;
 }
 export function chartSettings(
   chartRef,
@@ -57,6 +82,7 @@ export function chartSettings(
     .neighbourMargin((a, b) => 20)
     .nodeContent((d, i, arr, state) => nodeStyle(d))
     .onNodeClick((d) => {
+      onNodeClick(d.id);
       setCurrentRoot(d.id);
     })
     .initialZoom(1)

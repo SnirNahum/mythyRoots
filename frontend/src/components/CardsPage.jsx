@@ -4,7 +4,7 @@ import UniverseFilter from "./UniverseFilter";
 import { NAME } from "../utils/SavedWords";
 import { useMythyRootsStore } from "../store/store";
 
-const CardsPage = ({ onClose }) => {
+const CardsPage = () => {
   const universes = useMythyRootsStore((state) => state.universes);
   const [filteredUniverses, setFilteredUniverses] = useState(universes);
 
@@ -17,8 +17,8 @@ const CardsPage = ({ onClose }) => {
 
   return (
     <div className="universe-modal-content">
-      <UniverseFilter universes={universes} universeFilter={onChangeHandler} />
-      <UniverseCard filteredUniverses={filteredUniverses} onClose={onClose} />
+      <UniverseFilter universeFilter={onChangeHandler} />
+      <UniverseCard filteredUniverses={filteredUniverses}  />
     </div>
   );
 };

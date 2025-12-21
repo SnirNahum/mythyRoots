@@ -1,2 +1,3 @@
 
-SELECT * FROM relationships
+SELECT * FROM universes
+
